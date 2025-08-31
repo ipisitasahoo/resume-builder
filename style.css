@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+#cv-template{
+    display: none;
+}
+
+.myimg{
+    border: 1px solid rgb(6, 6, 53);
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background{
+    background-color: bisque;
+}
+
+
+@media print {
+    body {
+        background-color: rgb(255, 255, 255); /* Ensures white background */
+    }
+
+    .background {
+        background-color: bisque; /* Ensure background color is retained */
+    }
+
+    .myimg {
+        border: 1px solid rgb(6, 6, 53);
+        border-radius: 50%;
+        width: 200px;
+    }
+
+    /* Additional styling for print */
+    .container {
+        padding: 20px;
+        margin: 0 auto;
+        width: 100%; /* Full-width layout */
+    }
+
+    .card {
+        page-break-inside: avoid; /* Avoid page breaks within cards */
+    }
+
+    .card-header {
+        background-color: bisque;
+    }
+
+    /* Hide elements that shouldn't appear in print */
+    #cv-form {
+        display: none;
+    }
+
+    #tsbutton, #pbutton, #webutton, #aqbutton, #printbutton {
+        display: none; /* Hide 'Add' buttons */
+    }
+}
